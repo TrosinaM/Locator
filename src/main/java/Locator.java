@@ -16,9 +16,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * Created by Админ on 10.04.2016.
  */
 public class Locator extends TestCase{
-    private  static WebDriver driver = new FirefoxDriver();
+    private  static WebDriver driver ;
+
     @BeforeClass
     public void setUp() throws Exception {
+        driver = new FirefoxDriver();
         this.driver.get("https://en.wikipedia.org/wiki/Main_Page");
 
     }
@@ -36,7 +38,7 @@ public class Locator extends TestCase{
         WebElement element = driver.findElement(By.xpath("//div[@id='simpleSearch']/input[1]"));//find element by
         element.sendKeys("Banana");
         element.submit();
-        assertEquals(driver.findElement(By.id("");
+        //assertEquals(driver.findElement(By.id("");
 
 
     }
